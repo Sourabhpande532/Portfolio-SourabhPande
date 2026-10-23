@@ -28,8 +28,6 @@ html, body {
 
 @media (max-width: 480px) {
   .App {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1.25rem 1rem 3.5rem;
   }
 }
-

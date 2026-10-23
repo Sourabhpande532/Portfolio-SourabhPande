@@ -33,7 +33,7 @@
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -42,8 +42,8 @@
 
 .blog-card:hover {
   transform: translateY(-4px);
-  border-color: var(--border-medium);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+  border-color: rgba(245, 158, 11, 0.32);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(245, 158, 11, 0.08);
 }
 
 /* ==========================================================================
@@ -66,6 +66,14 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 11, 14, 0) 65%, rgba(17, 20, 27, 0.55) 100%);
+  pointer-events: none;
 }
 
 .blog-card:hover .blog-image img {
@@ -144,31 +152,47 @@
   transition: color 0.2s ease;
 }
 
+.blog-footer-link i {
+  transition: transform 0.2s ease;
+}
+
 .blog-card:hover .blog-footer-link {
   color: var(--accent-primary);
 }
 
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
-
-@media (max-width: 960px) {
-  .blogs-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+.blog-card:hover .blog-footer-link i {
+  transform: translateX(4px);
 }
 
-@media (max-width: 640px) {
+/* ==========================================================================
+   Responsive Breakpoints
+   Direct wrap from 3-col to 1-col (no awkward 2-column orphaned state)
+   ========================================================================== */
+
+@media (max-width: 880px) {
   .blogs-section {
-    padding: 2rem 0;
+    padding: 2.5rem 0;
   }
 
   .blogs-grid {
     grid-template-columns: 1fr;
-    max-width: 32rem;
+    max-width: 34rem;
     margin: 0 auto;
     gap: 1.5rem;
+  }
+
+  .blog-image {
+    height: 195px;
+  }
+
+  .blog-content {
+    padding: 1.35rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .blogs-section {
+    padding: 2rem 0;
   }
 
   .blog-image {
@@ -176,7 +200,7 @@
   }
 
   .blog-content {
-    padding: 1.25rem;
+    padding: 1.15rem;
   }
 
   .blog-title {
