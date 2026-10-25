@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .projects-section {
-  padding: 3rem 0;
+  padding: 4.25rem 0 2rem;
 }
 
 .projects-grid {
@@ -224,6 +224,10 @@
    ========================================================================== */
 
 @media (max-width: 960px) {
+  .projects-section {
+    padding: 3.25rem 0 1.75rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     max-width: 36rem;
@@ -238,7 +242,7 @@
 
 @media (max-width: 580px) {
   .projects-section {
-    padding: 2rem 0;
+    padding: 2.5rem 0 1.25rem;
   }
 
   .project-image-wrapper {

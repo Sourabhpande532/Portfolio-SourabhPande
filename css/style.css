@@ -63,7 +63,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin: 5rem 0 3rem;
+  margin: 0 0 2.75rem;
 }
 
 .section-eyebrow {
@@ -291,7 +291,7 @@ body {
    ========================================================================== */
 
 .connect-section {
-  padding: 5rem 0 2rem;
+  padding: 4.25rem 0 2rem;
   text-align: center;
 }
 
@@ -482,12 +482,27 @@ body {
     justify-content: flex-start;
   }
 
+  .section-header {
+    margin: 0 0 2rem;
+  }
+
+  .connect-section {
+    padding: 3.25rem 0 1.75rem;
+  }
+
   .connect-card {
     padding: 2.5rem 1.5rem;
   }
 }
 
 @media (max-width: 520px) {
+  .section-header {
+    margin: 0 0 1.65rem;
+  }
+
+  .connect-section {
+    padding: 2.5rem 0 1.25rem;
+  }
   .hero {
     padding: 1.25rem 0 2rem;
     text-align: left;

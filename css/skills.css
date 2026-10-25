@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .skills-section {
-  padding: 3.5rem 0;
+  padding: 4.25rem 0 2rem;
 }
 
 .skills-categories-grid {
@@ -124,6 +124,10 @@
    ========================================================================== */
 
 @media screen and (max-width: 980px) {
+  .skills-section {
+    padding: 3.25rem 0 1.75rem;
+  }
+
   .skills-categories-grid {
     grid-template-columns: 1fr;
     max-width: 34rem;
@@ -133,6 +137,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .skills-section {
+    padding: 2.5rem 0 1.25rem;
+  }
+
   .skill-category-card {
     padding: 1.4rem 1.15rem;
   }
