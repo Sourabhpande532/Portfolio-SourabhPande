@@ -21,7 +21,7 @@
 .project-card {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 14px;
+  border-radius: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -32,8 +32,8 @@
 
 .project-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(245, 158, 11, 0.32);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(245, 158, 11, 0.08);
+  border-color: rgba(59, 130, 246, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(59, 130, 246, 0.1);
 }
 
 /* ==========================================================================
@@ -52,10 +52,23 @@
 .project-category {
   font-family: var(--font-mono);
   font-size: 0.74rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--accent-text);
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.project-category::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  box-shadow: 0 0 6px var(--accent-glow);
 }
 
 .project-index {
@@ -63,6 +76,10 @@
   font-size: 0.74rem;
   font-weight: 600;
   color: var(--text-muted);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
 }
 
 /* ==========================================================================
@@ -72,8 +89,10 @@
 .project-image-wrapper {
   position: relative;
   width: 100%;
-  height: 220px;
-  background: #06070a;
+  aspect-ratio: 16 / 9;
+  min-height: 200px;
+  max-height: 240px;
+  background: #07090e;
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -84,19 +103,19 @@
   object-fit: cover;
   object-position: top center;
   display: block;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-image-wrapper::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(9, 11, 14, 0) 65%, rgba(17, 20, 27, 0.55) 100%);
+  background: linear-gradient(180deg, rgba(10, 13, 20, 0) 60%, rgba(17, 23, 38, 0.65) 100%);
   pointer-events: none;
 }
 
 .project-card:hover .project-image-wrapper img {
-  transform: scale(1.03);
+  transform: scale(1.035);
 }
 
 /* ==========================================================================
@@ -152,8 +171,9 @@
 }
 
 .project-card:hover .project-tech span {
-  border-color: var(--border-medium);
+  border-color: rgba(59, 130, 246, 0.25);
   color: var(--text-primary);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 /* ==========================================================================
@@ -173,13 +193,14 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  padding: 0.65rem 1rem;
+  padding: 0.68rem 1rem;
   border-radius: 8px;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   font-weight: 600;
   font-family: var(--font-sans);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  min-height: 42px;
 }
 
 .project-btn i {
@@ -188,15 +209,17 @@
 
 .project-btn.primary {
   background: var(--accent-primary);
-  color: #090b0e;
+  color: #ffffff;
   border: 1px solid var(--accent-primary);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.25);
 }
 
 .project-btn.primary:hover {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.35);
+  color: #ffffff;
 }
 
 .project-btn.primary:hover i {
@@ -212,7 +235,8 @@
 .project-btn.secondary:hover {
   background: var(--bg-surface-active);
   border-color: var(--border-strong);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
 .project-btn.secondary:hover i {
@@ -230,13 +254,15 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    max-width: 36rem;
+    max-width: 38rem;
     margin: 0 auto;
     gap: 1.75rem;
   }
 
   .project-image-wrapper {
-    height: 210px;
+    aspect-ratio: 16 / 9;
+    max-height: none;
+    min-height: auto;
   }
 }
 
@@ -246,15 +272,15 @@
   }
 
   .project-image-wrapper {
-    height: 185px;
+    aspect-ratio: 16 / 9;
   }
 
   .project-body {
-    padding: 1.2rem;
+    padding: 1.25rem 1rem;
   }
 
   .project-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
 
   .project-desc {
@@ -263,10 +289,11 @@
 
   .project-links {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.6rem;
   }
 
   .project-btn {
     width: 100%;
+    padding: 0.75rem 1rem;
   }
 }

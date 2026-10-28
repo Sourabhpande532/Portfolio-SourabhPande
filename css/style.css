@@ -1,25 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
 
 :root {
-  /* Core Palette - Obsidian & Warm Amber */
-  --bg-canvas: #090b0e;
-  --bg-surface: #11141b;
-  --bg-surface-elevated: #171b24;
-  --bg-surface-active: #1d222e;
+  /* ==========================================================================
+     Market-Standard Engineering Dark Palette (Linear / Stripe / Vercel style)
+     ========================================================================== */
+  /* Canvas & Background Surfaces */
+  --bg-canvas: #0a0d14;              /* Deep Obsidian Canvas with rich navy slate undertone */
+  --bg-surface: #111726;             /* Elevated card & container surface */
+  --bg-surface-elevated: #172033;    /* Component surface (headers, chips, controls) */
+  --bg-surface-active: #1e293f;      /* Active / hover state surface */
 
+  /* Structural Borders */
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-medium: rgba(255, 255, 255, 0.14);
-  --border-strong: rgba(255, 255, 255, 0.24);
+  --border-strong: rgba(255, 255, 255, 0.22);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  /* Typography */
+  --text-primary: #f8fafc;           /* Slate 50 - pristine high contrast headers */
+  --text-secondary: #94a3b8;         /* Slate 400 - comfortable reading prose */
+  --text-muted: #64748b;             /* Slate 500 - metadata, timestamps, captions */
 
-  --accent-primary: #f59e0b;
-  --accent-hover: #d97706;
-  --accent-subtle: rgba(245, 158, 11, 0.1);
-  --accent-border: rgba(245, 158, 11, 0.28);
-  --accent-text: #fbbf24;
+  /* Engineering Tech Cobalt / Indigo Accent */
+  --accent-primary: #3b82f6;         /* Electric Cobalt (WCAG AAA compliant with white text) */
+  --accent-hover: #2563eb;           /* Deep Cobalt for hover/active */
+  --accent-subtle: rgba(59, 130, 246, 0.10); /* Subtle tinted wash */
+  --accent-border: rgba(59, 130, 246, 0.28); /* Crisp accent border */
+  --accent-text: #60a5fa;            /* High-contrast bright blue for dark mode typography */
+  --accent-glow: rgba(59, 130, 246, 0.20);   /* Focused soft glow */
+
+  /* Live Status Emerald */
+  --status-emerald: #10b981;
+  --status-emerald-bg: rgba(16, 185, 129, 0.10);
+  --status-emerald-border: rgba(16, 185, 129, 0.25);
 
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
@@ -38,6 +50,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 section[id] {
@@ -50,7 +63,7 @@ body {
   font-family: var(--font-sans);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -73,7 +86,7 @@ body {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--accent-primary);
+  color: var(--accent-text);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 0.65rem;
@@ -102,18 +115,33 @@ body {
 
 .hero {
   display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 82vh;
-  padding: 2rem 0 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 75vh;
+  padding: 3.5rem 0 3rem;
   color: var(--text-primary);
-  gap: 2.5rem;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(37, 99, 235, 0.04) 50%, transparent 72%);
+  filter: blur(64px);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-content {
-  max-width: 52%;
-  flex: 1;
+  max-width: 48rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-status {
@@ -121,8 +149,8 @@ body {
   align-items: center;
   gap: 0.55rem;
   padding: 0.35rem 0.85rem;
-  background: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.22);
+  background: var(--status-emerald-bg);
+  border: 1px solid var(--status-emerald-border);
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 500;
@@ -133,7 +161,7 @@ body {
 .status-dot {
   width: 8px;
   height: 8px;
-  background: #10b981;
+  background: var(--status-emerald);
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
   animation: pulse-dot 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
@@ -179,7 +207,7 @@ body {
 }
 
 .hero-role span:not(.role-sep) {
-  color: var(--accent-primary);
+  color: var(--accent-text);
 }
 
 .hero-desc {
@@ -194,46 +222,6 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
-}
-
-/* ==========================================================================
-   Hero Visual / Graphic
-   ========================================================================== */
-
-.hero-visual {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 340px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.hero-visual::before {
-  content: "";
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.14) 0%, rgba(16, 185, 129, 0.06) 50%, transparent 72%);
-  filter: blur(36px);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-visual img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 290px;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.45));
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero-visual:hover img {
-  transform: translateY(-4px) scale(1.02);
 }
 
 /* ==========================================================================
@@ -258,15 +246,17 @@ body {
 
 .btn.primary {
   background: var(--accent-primary);
-  color: #090b0e;
+  color: #ffffff;
   border: 1px solid var(--accent-primary);
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.25);
 }
 
 .btn.primary:hover {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.25);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+  color: #ffffff;
 }
 
 .btn.secondary {
@@ -278,7 +268,7 @@ body {
 .btn.secondary:hover {
   background: var(--bg-surface-elevated);
   border-color: var(--border-strong);
-  color: #fff;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -307,7 +297,8 @@ body {
 }
 
 .connect-card:hover {
-  border-color: var(--border-medium);
+  border-color: var(--accent-border);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4), 0 0 28px rgba(59, 130, 246, 0.08);
 }
 
 .connect-heading {
@@ -331,7 +322,7 @@ body {
   align-items: center;
   gap: 0.65rem;
   background: var(--accent-primary);
-  color: #090b0e;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.85rem 1.85rem;
   border-radius: 8px;
@@ -340,12 +331,14 @@ body {
   font-family: inherit;
   transition: all 0.2s ease;
   margin-bottom: 2.25rem;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.25);
 }
 
 .connect-email-btn:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.25);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
+  color: #ffffff;
 }
 
 .connect-divider {
@@ -383,7 +376,7 @@ body {
 .social-icon:hover {
   background-color: var(--accent-subtle);
   border-color: var(--accent-border);
-  color: var(--accent-primary);
+  color: var(--accent-text);
   transform: translateY(-3px);
 }
 
@@ -430,7 +423,7 @@ body {
 #backToTop:hover {
   background: var(--bg-surface-elevated);
   border-color: var(--accent-border);
-  color: var(--accent-primary);
+  color: var(--accent-text);
   transform: translateY(-2px);
 }
 

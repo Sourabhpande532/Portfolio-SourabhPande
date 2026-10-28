@@ -11,7 +11,7 @@
 /* Custom selection highlight */
 ::selection {
   background: var(--accent-primary);
-  color: #090b0e;
+  color: #ffffff;
 }
 
 /* Global image safety */
@@ -20,9 +20,9 @@ img {
   height: auto;
 }
 
-/* Container safety against horizontal scroll on small devices */
+/* Container safety against horizontal scroll on small devices without breaking sticky positioning */
 html, body {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
