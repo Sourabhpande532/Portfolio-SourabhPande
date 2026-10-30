@@ -2,36 +2,37 @@
 
 :root {
   /* ==========================================================================
-     Market-Standard Engineering Dark Palette (Linear / Stripe / Vercel style)
+     Soft, Eye-Friendly, Human-Designed Dark Palette (Warm Slate & Soft Steel Blue)
      ========================================================================== */
-  /* Canvas & Background Surfaces */
-  --bg-canvas: #0a0d14;              /* Deep Obsidian Canvas with rich navy slate undertone */
-  --bg-surface: #111726;             /* Elevated card & container surface */
-  --bg-surface-elevated: #172033;    /* Component surface (headers, chips, controls) */
-  --bg-surface-active: #1e293f;      /* Active / hover state surface */
+  /* Canvas & Background Surfaces (Soft Charcoal-Slate, low eye strain) */
+  --bg-canvas: #111318;
+  --bg-surface: #181b22;
+  --bg-surface-elevated: #20242d;
+  --bg-surface-active: #282d38;
 
   /* Structural Borders */
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.14);
-  --border-strong: rgba(255, 255, 255, 0.22);
+  --border-medium: rgba(255, 255, 255, 0.13);
+  --border-strong: rgba(255, 255, 255, 0.20);
 
   /* Typography */
-  --text-primary: #f8fafc;           /* Slate 50 - pristine high contrast headers */
-  --text-secondary: #94a3b8;         /* Slate 400 - comfortable reading prose */
-  --text-muted: #64748b;             /* Slate 500 - metadata, timestamps, captions */
+  --text-primary: #eef2f6;
+  --text-secondary: #9ba3b0;
+  --text-muted: #6e7785;
 
-  /* Engineering Tech Cobalt / Indigo Accent */
-  --accent-primary: #3b82f6;         /* Electric Cobalt (WCAG AAA compliant with white text) */
-  --accent-hover: #2563eb;           /* Deep Cobalt for hover/active */
-  --accent-subtle: rgba(59, 130, 246, 0.10); /* Subtle tinted wash */
-  --accent-border: rgba(59, 130, 246, 0.28); /* Crisp accent border */
-  --accent-text: #60a5fa;            /* High-contrast bright blue for dark mode typography */
-  --accent-glow: rgba(59, 130, 246, 0.20);   /* Focused soft glow */
+  /* Soft, Desaturated Steel-Cerulean Accent (Human-friendly, non-neon) */
+  --accent-primary: #5b8ec9;
+  --accent-button: #3d72b0;
+  --accent-button-hover: #326098;
+  --accent-hover: #4a7eb8;
+  --accent-subtle: rgba(91, 142, 201, 0.12);
+  --accent-border: rgba(91, 142, 201, 0.32);
+  --accent-text: #7daae0;
 
-  /* Live Status Emerald */
-  --status-emerald: #10b981;
-  --status-emerald-bg: rgba(16, 185, 129, 0.10);
-  --status-emerald-border: rgba(16, 185, 129, 0.25);
+  /* Status Indicator (Soft Steel-Blue matching theme, no green) */
+  --status-emerald: var(--accent-primary);
+  --status-emerald-bg: rgba(91, 142, 201, 0.08);
+  --status-emerald-border: rgba(91, 142, 201, 0.22);
 
   --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
@@ -39,7 +40,7 @@
   /* Backward-compatible fallbacks */
   --borderColor: var(--border-subtle);
   --bgPrimary: var(--bg-canvas);
-  --primaryEmerald: #10b981;
+  --primaryEmerald: var(--accent-primary);
 }
 
 * {
@@ -69,44 +70,49 @@ body {
 }
 
 .App {
-  max-width: 68rem;
+  max-width: 74rem;
   margin: 0 auto;
   padding: 2rem 1.5rem 4rem;
 }
 
+/* ==========================================================================
+   Section Headers (Clean, Left-Aligned, Grounded)
+   ========================================================================== */
+
 .section-header {
-  text-align: center;
-  margin: 0 0 2.75rem;
+  text-align: left;
+  margin: 0 0 2.5rem;
 }
 
 .section-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--accent-text);
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 0.65rem;
+  display: none;
 }
 
 .section-title {
-  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
   font-weight: 700;
   color: var(--text-primary);
   letter-spacing: -0.5px;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.5rem;
   line-height: 1.2;
 }
 
 .section-subtitle {
-  font-size: 0.98rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 36rem;
-  margin: 0 auto;
+  max-width: 40rem;
+  margin: 0;
   line-height: 1.6;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3.5px;
+  background-color: var(--accent-primary);
+  border-radius: 2px;
+  margin-top: 1.25rem;
 }
 
 /* ==========================================================================
@@ -118,27 +124,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 75vh;
-  padding: 3.5rem 0 3rem;
+  min-height: 76vh;
+  padding: 4.5rem 0 4rem;
   color: var(--text-primary);
   position: relative;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 15%;
-  right: 2%;
-  width: 440px;
-  height: 440px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, rgba(37, 99, 235, 0.04) 50%, transparent 72%);
-  filter: blur(64px);
-  z-index: 0;
-  pointer-events: none;
-}
-
 .hero-content {
-  max-width: 48rem;
+  max-width: 46rem;
   width: 100%;
   position: relative;
   z-index: 1;
@@ -149,55 +142,55 @@ body {
   align-items: center;
   gap: 0.55rem;
   padding: 0.35rem 0.85rem;
-  background: var(--status-emerald-bg);
-  border: 1px solid var(--status-emerald-border);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
   border-radius: 9999px;
   font-size: 0.82rem;
   font-weight: 500;
-  color: #34d399;
+  color: var(--text-secondary);
   margin-bottom: 1.25rem;
 }
 
 .status-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   background: var(--status-emerald);
   border-radius: 50%;
-  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  animation: pulse-dot 2.2s infinite cubic-bezier(0.4, 0, 0.6, 1);
-}
-
-@keyframes pulse-dot {
-  0% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
+  flex-shrink: 0;
 }
 
 .hero-name {
-  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-size: clamp(2.5rem, 5.2vw, 3.85rem);
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -1px;
   line-height: 1.1;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-role {
-  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-  font-weight: 600;
+  font-size: clamp(1.15rem, 2.3vw, 1.4rem);
+  font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: -0.2px;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.5rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.45rem;
+  position: relative;
+  padding-bottom: 1.25rem;
+}
+
+.hero-role::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 64px;
+  height: 3.5px;
+  background-color: var(--accent-primary);
+  border-radius: 2px;
 }
 
 .hero-role .role-sep {
@@ -207,7 +200,8 @@ body {
 }
 
 .hero-role span:not(.role-sep) {
-  color: var(--accent-text);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .hero-desc {
@@ -217,10 +211,15 @@ body {
   margin-bottom: 0.85rem;
 }
 
+.hero-desc strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
 .hero-buttons {
   margin-top: 1.75rem;
   display: flex;
-  gap: 1rem;
+  gap: 0.9rem;
   align-items: center;
 }
 
@@ -233,29 +232,27 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.6rem;
-  font-size: 0.95rem;
+  padding: 0.72rem 1.5rem;
+  font-size: 0.94rem;
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
   font-family: inherit;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s ease;
   cursor: pointer;
   line-height: 1.2;
 }
 
 .btn.primary {
-  background: var(--accent-primary);
+  background: var(--accent-button);
   color: #ffffff;
-  border: 1px solid var(--accent-primary);
-  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.25);
+  border: 1px solid var(--accent-button);
 }
 
 .btn.primary:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
+  background: var(--accent-button-hover);
+  border-color: var(--accent-button-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
   color: #ffffff;
 }
 
@@ -277,114 +274,87 @@ body {
 }
 
 /* ==========================================================================
-   Connect / Contact Section
+   Connect / Contact Section (Clean Card Grid)
    ========================================================================== */
 
 .connect-section {
   padding: 4.25rem 0 2rem;
-  text-align: center;
 }
 
-.connect-card {
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.connect-item-card {
+  grid-column: span 2;
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  padding: 3.5rem 2.5rem;
-  max-width: 42rem;
-  margin: 0 auto;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.connect-card:hover {
-  border-color: var(--accent-border);
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4), 0 0 28px rgba(59, 130, 246, 0.08);
-}
-
-.connect-heading {
-  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-  font-weight: 700;
+  border-radius: 12px;
+  padding: 1.4rem 1.5rem;
+  text-decoration: none;
   color: var(--text-primary);
-  letter-spacing: -0.5px;
-  margin-bottom: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.22s ease, border-color 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-.connect-tagline {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  max-width: 32rem;
-  margin: 0 auto 2.25rem;
+/* Top two cards (Email & LinkedIn) span 3 columns each (2 per row) */
+.connect-grid .connect-item-card:nth-child(1),
+.connect-grid .connect-item-card:nth-child(2) {
+  grid-column: span 3;
 }
 
-.connect-email-btn {
+.connect-item-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-border);
+  background: var(--bg-surface-elevated);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.connect-item-top {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.connect-item-icon {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  background: var(--accent-primary);
-  color: #ffffff;
-  text-decoration: none;
-  padding: 0.85rem 1.85rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  font-family: inherit;
-  transition: all 0.2s ease;
-  margin-bottom: 2.25rem;
-  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.25);
-}
-
-.connect-email-btn:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.35);
-  color: #ffffff;
-}
-
-.connect-divider {
-  width: 100%;
-  max-width: 18rem;
-  height: 1px;
-  background: var(--border-subtle);
-  margin: 0 auto 2rem;
-}
-
-/* Social icons container */
-.social-links {
-  display: flex;
-  gap: 0.85rem;
   justify-content: center;
-  align-items: center;
+  font-size: 1.3rem;
+  color: var(--accent-primary);
+  flex-shrink: 0;
 }
 
-/* Individual icon */
-.social-icon {
-  width: 42px;
-  height: 42px;
-  background: var(--bg-surface-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.connect-item-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.2px;
+}
+
+.connect-item-sub {
+  font-size: 0.92rem;
   color: var(--text-secondary);
-  font-size: 1.05rem;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.social-icon:hover {
-  background-color: var(--accent-subtle);
-  border-color: var(--accent-border);
-  color: var(--accent-text);
-  transform: translateY(-3px);
+  margin: 0;
+  word-break: break-word;
 }
 
 .footer-copy {
   text-align: center;
   color: var(--text-muted);
   font-size: 0.85rem;
-  padding: 3rem 0 1rem;
+  padding: 3.5rem 0 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
 }
 
 /* ==========================================================================
@@ -397,11 +367,11 @@ body {
   right: 2rem;
   width: 42px;
   height: 42px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-medium);
-  border-radius: 10px;
-  color: var(--text-secondary);
-  font-size: 1rem;
+  background: var(--accent-button);
+  border: 1px solid var(--accent-button);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 0.95rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -411,7 +381,7 @@ body {
   transform: translateY(10px);
   transition: all 0.25s ease;
   z-index: 999;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
 #backToTop.visible {
@@ -421,14 +391,14 @@ body {
 }
 
 #backToTop:hover {
-  background: var(--bg-surface-elevated);
-  border-color: var(--accent-border);
-  color: var(--accent-text);
+  background: var(--accent-button-hover);
+  border-color: var(--accent-button-hover);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
 /* ==========================================================================
-   Responsive Breakpoints for Base Layout & Hero Section
+   Responsive Breakpoints for Base Layout, Hero & Connect Section
    ========================================================================== */
 
 @media (max-width: 860px) {
@@ -443,36 +413,26 @@ body {
     text-align: left;
   }
 
-  .hero-status {
-    margin-left: 0;
-    margin-right: auto;
-  }
-
   .hero-name {
     font-size: clamp(2.1rem, 6vw, 2.9rem);
     letter-spacing: -0.5px;
     margin-bottom: 0.4rem;
-    text-align: left;
   }
 
   .hero-role {
     font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-    margin-bottom: 1.2rem;
-    justify-content: flex-start;
-    text-align: left;
+    margin-bottom: 1.25rem;
   }
 
   .hero-desc {
     font-size: 0.98rem;
     line-height: 1.65;
     max-width: 100%;
-    text-align: left;
   }
 
   .hero-buttons {
     margin-top: 1.5rem;
     gap: 0.85rem;
-    justify-content: flex-start;
   }
 
   .section-header {
@@ -483,12 +443,22 @@ body {
     padding: 3.25rem 0 1.75rem;
   }
 
-  .connect-card {
-    padding: 2.5rem 1.5rem;
+  .connect-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .connect-item-card,
+  .connect-grid .connect-item-card:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .connect-grid .connect-item-card:nth-child(1) {
+    grid-column: span 2;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 560px) {
   .section-header {
     margin: 0 0 1.65rem;
   }
@@ -496,21 +466,15 @@ body {
   .connect-section {
     padding: 2.5rem 0 1.25rem;
   }
+
   .hero {
     padding: 1.25rem 0 2rem;
-    text-align: left;
-  }
-
-  .hero-content {
-    text-align: left;
   }
 
   .hero-status {
     font-size: 0.76rem;
     padding: 0.3rem 0.75rem;
     margin-bottom: 0.85rem;
-    margin-left: 0;
-    margin-right: auto;
   }
 
   .hero-name {
@@ -519,23 +483,20 @@ body {
     line-height: 1.15;
     margin-bottom: 0.35rem;
     word-break: break-word;
-    text-align: left;
   }
 
   .hero-role {
     font-size: 1.05rem;
     line-height: 1.4;
     gap: 0.35rem;
-    margin-bottom: 1.1rem;
-    justify-content: flex-start;
-    text-align: left;
+    margin-bottom: 1.15rem;
+    padding-bottom: 1rem;
   }
 
   .hero-desc {
     font-size: 0.93rem;
     line-height: 1.65;
     margin-bottom: 0.8rem;
-    text-align: left;
   }
 
   .hero-buttons {
@@ -543,7 +504,6 @@ body {
     width: 100%;
     gap: 0.75rem;
     margin-top: 1.35rem;
-    justify-content: flex-start;
   }
 
   .hero-buttons .btn {
@@ -553,11 +513,15 @@ body {
     justify-content: center;
   }
 
-  .connect-email-btn {
-    width: 100%;
-    justify-content: center;
-    font-size: 0.88rem;
-    padding: 0.8rem 1rem;
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-item-card,
+  .connect-grid .connect-item-card:nth-child(1),
+  .connect-grid .connect-item-card:nth-child(2) {
+    grid-column: span 1;
+    padding: 1.2rem 1.25rem;
   }
 }
 
