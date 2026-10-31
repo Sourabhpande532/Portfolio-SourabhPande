@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(17, 19, 24, 0.88);
+  background-color: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: sticky;
@@ -12,9 +12,9 @@
 }
 
 .navbar.scrolled {
-  background-color: rgba(17, 19, 24, 0.96);
-  border-bottom-color: var(--border-medium);
-  box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.45);
+  background-color: rgba(10, 25, 47, 0.94);
+  border-bottom-color: rgba(100, 255, 218, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.75);
   padding: 0.8rem 0;
 }
 
@@ -42,7 +42,7 @@
   font-weight: 700;
   font-size: 1.15rem;
   letter-spacing: -0.3px;
-  color: var(--text-primary);
+  color: var(--text-heading);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -51,7 +51,7 @@
 }
 
 .nav-brand-heading a:hover {
-  color: var(--accent-text);
+  color: var(--accent-primary);
 }
 
 .nav-brand-heading a::before {
@@ -60,6 +60,7 @@
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--accent-primary);
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.35);
 }
 
 /* ==========================================================================
@@ -74,7 +75,7 @@
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   font-family: var(--font-sans);
   font-size: 0.93rem;
   font-weight: 500;
@@ -84,7 +85,7 @@
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
+  color: var(--accent-primary);
 }
 
 .nav-link::after {
@@ -95,6 +96,7 @@
   width: 0;
   height: 2px;
   background-color: var(--accent-primary);
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.5);
   transition: width 0.22s ease;
   border-radius: 2px;
 }
@@ -126,14 +128,14 @@
 
 .nav-hamburger:hover {
   background: var(--bg-surface-elevated);
-  border-color: var(--border-strong);
+  border-color: var(--accent-border);
 }
 
 .nav-hamburger span {
   display: block;
   width: 18px;
   height: 2px;
-  background-color: var(--text-primary);
+  background-color: var(--accent-primary);
   border-radius: 2px;
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, width 0.2s ease;
   transform-origin: center;
@@ -209,7 +211,7 @@
 
   .nav-link:hover {
     background: var(--bg-surface-elevated);
-    color: var(--text-primary);
+    color: var(--accent-primary);
   }
 
   .nav-link::after {

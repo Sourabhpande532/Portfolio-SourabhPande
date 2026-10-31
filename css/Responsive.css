@@ -10,8 +10,8 @@
 
 /* Custom selection highlight */
 ::selection {
-  background: var(--accent-primary);
-  color: #ffffff;
+  background: rgba(100, 255, 218, 0.22);
+  color: var(--accent-primary);
 }
 
 /* Global image safety */

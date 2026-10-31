@@ -32,8 +32,8 @@
   border: 1px solid var(--border-subtle);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: var(--card-base-shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -42,8 +42,9 @@
 
 .blog-card:hover {
   transform: translateY(-4px);
+  background: var(--bg-surface-elevated);
   border-color: var(--accent-border);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--card-hover-shadow);
 }
 
 /* ==========================================================================
@@ -52,7 +53,7 @@
 
 .blog-image {
   aspect-ratio: 16 / 9.2;
-  background-color: #0b0d11;
+  background-color: #071120;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,13 +95,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: var(--accent-text);
-  background: var(--accent-subtle);
-  border: 1px solid var(--accent-border);
-  padding: 0.2rem 0.55rem;
-  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+  background: rgba(100, 255, 218, 0.10);
+  border: 1px solid rgba(100, 255, 218, 0.24);
+  padding: 0.2rem 0.65rem;
+  border-radius: 9999px;
 }
 
 .blog-read-time {
@@ -113,13 +115,13 @@
   font-weight: 700;
   line-height: 1.4;
   margin-bottom: 0.55rem;
-  color: var(--text-primary);
+  color: var(--text-heading);
   letter-spacing: -0.2px;
   transition: color 0.2s ease;
 }
 
 .blog-card:hover .blog-title {
-  color: var(--accent-text);
+  color: var(--accent-primary);
 }
 
 .blog-date {
@@ -146,7 +148,7 @@
 }
 
 .blog-card:hover .blog-footer-link {
-  color: var(--accent-text);
+  color: var(--accent-primary);
 }
 
 .blog-card:hover .blog-footer-link i {
