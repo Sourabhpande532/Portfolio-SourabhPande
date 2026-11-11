@@ -5,6 +5,16 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sourabh Pande — Full Stack Developer specializing in the MERN stack, TypeScript, Python, PostgreSQL, RAG pipelines, and Agentic AI systems." />
+  <meta name="keywords"
+    content="Sourabh Pande, Full Stack Developer, MERN Stack, Agentic AI, RAG, React, Node.js, TypeScript, Python, PostgreSQL, Software Engineer Portfolio" />
+  <meta name="author" content="Sourabh Pande" />
+  <meta name="theme-color" content="#0a192f" />
+  <meta property="og:title" content="Sourabh Pande | Full Stack Developer — Agentic AI &amp; MERN" />
+  <meta property="og:description"
+    content="Full-stack engineer building production-grade web applications powered by modern architectures and autonomous AI systems." />
+  <meta property="og:type" content="website" />
   <title>Sourabh Pande | Full Stack Developer</title>
   <link rel="shortcut icon" href="./Images/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +34,7 @@
 </head>
 
 <body>
-  <div class="navbar">
+  <div class="navbar" role="navigation" aria-label="Main navigation">
     <div class="containers">
       <div class="nav-brand">
         <span class="nav-brand-heading">
@@ -32,7 +42,8 @@
         </span>
       </div>
       <!-- Hamburger button (mobile only) -->
-      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-hamburger" id="navHamburger" type="button" aria-label="Open menu" aria-expanded="false"
+        aria-controls="navGroup">
         <span></span>
         <span></span>
         <span></span>
@@ -40,10 +51,13 @@
       <!-- Nav links -->
       <div class="nav-group" id="navGroup">
         <div class="nav-menu">
-          <a href="#about" class="nav-link">About</a>
+          <a href="#about" class="nav-link active">About</a>
         </div>
         <div class="nav-menu">
           <a href="#project" class="nav-link">Projects</a>
+        </div>
+        <div class="nav-menu">
+          <a href="#skills" class="nav-link">Skills</a>
         </div>
         <div class="nav-menu">
           <a href="#blogs" class="nav-link">Blogs</a>
@@ -76,13 +90,13 @@
         </p>
         <div class="hero-buttons">
           <a href="#connect" class="btn primary">
-            <i class="fa-solid fa-paper-plane"></i>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
             Contact Me
           </a>
           <a href="https://drive.google.com/file/d/1yFnWOOrZJQBjKmEEKiC3rTcCjBzbTTtj/view?usp=drive_link" target="_blank"
-            class="btn secondary">
+            rel="noopener noreferrer" class="btn secondary">
             Resume
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -106,7 +120,8 @@
             <span class="project-index">01</span>
           </div>
           <div class="project-image-wrapper">
-            <img src="./assets/job-platform.png" alt="TalentHub — AI-Powered Hiring Platform Preview" />
+            <img src="./assets/job-platform.png" alt="TalentHub — AI-Powered Hiring Platform Preview" loading="lazy"
+              decoding="async" />
           </div>
 
           <div class="project-body">
@@ -125,13 +140,14 @@
             </div>
 
             <div class="project-links">
-              <a href="https://talenthub-client-rho.vercel.app/" target="_blank" class="project-btn primary">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="https://talenthub-client-rho.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-btn primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Live Demo
               </a>
-              <a href="https://github.com/Sourabhpande532/talenthub-client" target="_blank"
+              <a href="https://github.com/Sourabhpande532/talenthub-client" target="_blank" rel="noopener noreferrer"
                 class="project-btn secondary">
-                <i class="fa-brands fa-github"></i>
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 Source Code
               </a>
             </div>
@@ -145,7 +161,8 @@
             <span class="project-index">02</span>
           </div>
           <div class="project-image-wrapper">
-            <img src="./assets/collabCore.png" alt="CollabCore Project Management Preview" />
+            <img src="./assets/collabCore.png" alt="CollabCore — Project Management Preview" loading="lazy"
+              decoding="async" />
           </div>
 
           <div class="project-body">
@@ -164,12 +181,14 @@
             </div>
 
             <div class="project-links">
-              <a href="https://collab-core-br21.vercel.app/" target="_blank" class="project-btn primary">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="https://collab-core-br21.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-btn primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Live Demo
               </a>
-              <a href="https://github.com/Sourabhpande532/CollabCore" target="_blank" class="project-btn secondary">
-                <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/Sourabhpande532/CollabCore" target="_blank" rel="noopener noreferrer"
+                class="project-btn secondary">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 Source Code
               </a>
             </div>
@@ -183,7 +202,7 @@
             <span class="project-index">03</span>
           </div>
           <div class="project-image-wrapper">
-            <img src="./Images/AVO.png" alt="AvoCart E-Commerce Platform Preview" />
+            <img src="./Images/AVO.png" alt="AvoCart — E-Commerce Platform Preview" loading="lazy" decoding="async" />
           </div>
 
           <div class="project-body">
@@ -203,12 +222,14 @@
             </div>
 
             <div class="project-links">
-              <a href="https://avo-cart-client.vercel.app/" target="_blank" class="project-btn primary">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="https://avo-cart-client.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-btn primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Live Demo
               </a>
-              <a href="https://github.com/Sourabhpande532/AvoCartClient" target="_blank" class="project-btn secondary">
-                <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/Sourabhpande532/AvoCartClient" target="_blank" rel="noopener noreferrer"
+                class="project-btn secondary">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 Source Code
               </a>
             </div>
@@ -222,7 +243,8 @@
             <span class="project-index">04</span>
           </div>
           <div class="project-image-wrapper">
-            <img src="./Images/chatFlow.png" alt="ChatFlow — Real-Time Messenger Preview" />
+            <img src="./Images/chatFlow.png" alt="ChatFlow — Real-Time Messenger Preview" loading="lazy"
+              decoding="async" />
           </div>
 
           <div class="project-body">
@@ -240,12 +262,14 @@
             </div>
 
             <div class="project-links">
-              <a href="https://chat-flow-swart.vercel.app/" target="_blank" class="project-btn primary">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="https://chat-flow-swart.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-btn primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Live Demo
               </a>
-              <a href="https://github.com/Sourabhpande532/CHAT_FLOW" target="_blank" class="project-btn secondary">
-                <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/Sourabhpande532/CHAT_FLOW" target="_blank" rel="noopener noreferrer"
+                class="project-btn secondary">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 Source Code
               </a>
             </div>
@@ -259,7 +283,7 @@
             <span class="project-index">05</span>
           </div>
           <div class="project-image-wrapper">
-            <img src="./Images/imgixy.png" alt="Imgixy AI Photo Library Preview" />
+            <img src="./Images/imgixy.png" alt="Imgixy — AI Photo Library Preview" loading="lazy" decoding="async" />
           </div>
 
           <div class="project-body">
@@ -277,12 +301,14 @@
             </div>
 
             <div class="project-links">
-              <a href="https://imgixy-1f4i.vercel.app/" target="_blank" class="project-btn primary">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="https://imgixy-1f4i.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-btn primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Live Demo
               </a>
-              <a href="https://github.com/Sourabhpande532/Imgixy" target="_blank" class="project-btn secondary">
-                <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/Sourabhpande532/Imgixy" target="_blank" rel="noopener noreferrer"
+                class="project-btn secondary">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 Source Code
               </a>
             </div>
@@ -296,7 +322,8 @@
             <span class="project-index">06</span>
           </div>
           <div class="project-image-wrapper">
-            <img src="./assets/astra.png" alt="AstraAIs — AI-Powered Employee Assistant Preview" />
+            <img src="./assets/astra.png" alt="AstraAIs — Agentic AI HR Assistant Preview" loading="lazy"
+              decoding="async" />
           </div>
 
           <div class="project-body">
@@ -315,106 +342,20 @@
             </div>
 
             <div class="project-links">
-              <a href="https://astra-a-is-bd1o.vercel.app/" target="_blank" class="project-btn primary">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              <a href="https://astra-a-is-bd1o.vercel.app/" target="_blank" rel="noopener noreferrer"
+                class="project-btn primary">
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                 Live Demo
               </a>
-              <a href="https://github.com/Sourabhpande532/AstraAIs" target="_blank" class="project-btn secondary">
-                <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/Sourabhpande532/AstraAIs" target="_blank" rel="noopener noreferrer"
+                class="project-btn secondary">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
                 Source Code
               </a>
             </div>
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <!-- Blogs section -->
-    <section class="blogs-section" id="blogs">
-      <div class="section-header">
-        <span class="section-eyebrow">Writings &amp; Insights</span>
-        <h2 class="section-title">Articles &amp; Publications</h2>
-        <p class="section-subtitle">
-          In-depth technical articles on JavaScript internals, modern web patterns, and automation workflows.
-        </p>
-      </div>
-
-      <div class="blogs-grid">
-        <!-- Blog Card 1 -->
-        <a href="https://saurabh532.hashnode.dev/beginners-guide-to-ci-cd-how-automation-saved-my-weekends?utm_source=hashnode&utm_medium=feed"
-          class="blog-link" target="_blank">
-          <div class="blog-card">
-            <div class="blog-image">
-              <img src="./Images/Pipelinewrk.webp" alt="CI/CD Automation Guide Illustration" />
-            </div>
-            <div class="blog-content">
-              <div class="blog-meta-top">
-                <span class="blog-platform-badge">
-                  <i class="fa-brands fa-hashnode"></i>
-                  Hashnode
-                </span>
-                <span class="blog-read-time">5 min read</span>
-              </div>
-              <h3 class="blog-title">Beginner's Guide to CI/CD: How Automation Saved My Weekends</h3>
-              <p class="blog-date">June 22, 2026</p>
-              <div class="blog-footer-link">
-                <span>Read Article</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Blog Card 2 -->
-        <a href="https://saurabh532.hashnode.dev/the-closure-cookbook-practical-recipes-for-real-world-javascript"
-          target="_blank" class="blog-link">
-          <div class="blog-card">
-            <div class="blog-image">
-              <img src="./Images/javascript-closures.jpg" alt="JavaScript Closures Article Illustration" />
-            </div>
-            <div class="blog-content">
-              <div class="blog-meta-top">
-                <span class="blog-platform-badge">
-                  <i class="fa-brands fa-hashnode"></i>
-                  Hashnode
-                </span>
-                <span class="blog-read-time">3 min read</span>
-              </div>
-              <h3 class="blog-title">The Closure Cookbook: Practical Recipes for Real-World JavaScript</h3>
-              <p class="blog-date">May 11, 2026</p>
-              <div class="blog-footer-link">
-                <span>Read Article</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-        </a>
-
-        <!-- Blog Card 3 -->
-        <a href="https://saurabh532.hashnode.dev/mastering-the-javascript-event-loop-microtasks-vs-macrotasks-with-example"
-          target="_blank" class="blog-link">
-          <div class="blog-card">
-            <div class="blog-image">
-              <img src="./Images/event-loop.png" alt="JavaScript Event Loop Article Illustration" />
-            </div>
-            <div class="blog-content">
-              <div class="blog-meta-top">
-                <span class="blog-platform-badge">
-                  <i class="fa-brands fa-hashnode"></i>
-                  Hashnode
-                </span>
-                <span class="blog-read-time">6 min read</span>
-              </div>
-              <h3 class="blog-title">Mastering the JavaScript Event Loop</h3>
-              <p class="blog-date">March 17, 2026</p>
-              <div class="blog-footer-link">
-                <span>Read Article</span>
-                <i class="fa-solid fa-arrow-right"></i>
-              </div>
-            </div>
-          </div>
-        </a>
       </div>
     </section>
 
@@ -432,7 +373,7 @@
         <!-- Category 1: Frontend -->
         <div class="skill-category-card">
           <div class="skill-category-header">
-            <i class="fa-solid fa-code skill-category-icon"></i>
+            <i class="fa-solid fa-code skill-category-icon" aria-hidden="true"></i>
             <div>
               <h3 class="skill-category-title">Frontend Engineering</h3>
               <p class="skill-category-desc">UI components, responsive layouts, and modern web standards</p>
@@ -441,30 +382,32 @@
           <div class="skill-items-grid">
             <div class="skill-item">
               <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/reactjs.svg"
-                alt="React" />
+                alt="React" loading="lazy" decoding="async" />
               <span>React</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/javascript.svg"
-                alt="JavaScript" />
+                alt="JavaScript" loading="lazy" decoding="async" />
               <span>JavaScript</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/typescript.svg"
-                alt="TypeScript" />
+                alt="TypeScript" loading="lazy" decoding="async" />
               <span>TypeScript</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/html.svg" alt="HTML" />
+              <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/html.svg" alt="HTML"
+                loading="lazy" decoding="async" />
               <span>HTML</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/css.svg" alt="CSS" />
+              <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/css.svg" alt="CSS"
+                loading="lazy" decoding="async" />
               <span>CSS</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/bootstrap.svg"
-                alt="Bootstrap" />
+                alt="Bootstrap" loading="lazy" decoding="async" />
               <span>Bootstrap</span>
             </div>
           </div>
@@ -473,7 +416,7 @@
         <!-- Category 2: Backend & Database -->
         <div class="skill-category-card">
           <div class="skill-category-header">
-            <i class="fa-solid fa-server skill-category-icon"></i>
+            <i class="fa-solid fa-server skill-category-icon" aria-hidden="true"></i>
             <div>
               <h3 class="skill-category-title">Backend &amp; Databases</h3>
               <p class="skill-category-desc">REST APIs, server architecture, relational &amp; document databases</p>
@@ -482,30 +425,31 @@
           <div class="skill-items-grid">
             <div class="skill-item">
               <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/nodejs.svg"
-                alt="Node.js" />
+                alt="Node.js" loading="lazy" decoding="async" />
               <span>Node.js</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="./assets/python.svg" alt="Python" />
+              <img width="28" height="28" src="./assets/python.svg" alt="Python" loading="lazy" decoding="async" />
               <span>Python</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28"
                 src="https://cdn.iconscout.com/icon/premium/png-512-thumb/express-js-icon-svg-download-png-9200748.png?f=webp&w=512"
-                class="icons-colo" alt="Express.js" />
+                class="icons-colo" alt="Express.js" loading="lazy" decoding="async" />
               <span>Express.js</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="./assets/postgresql.svg" alt="PostgreSQL" />
+              <img width="28" height="28" src="./assets/postgresql.svg" alt="PostgreSQL" loading="lazy"
+                decoding="async" />
               <span>PostgreSQL</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28" src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/mongodb.svg"
-                alt="MongoDB" />
+                alt="MongoDB" loading="lazy" decoding="async" />
               <span>MongoDB</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="./assets/sql.svg" alt="SQL" />
+              <img width="28" height="28" src="./assets/sql.svg" alt="SQL" loading="lazy" decoding="async" />
               <span>SQL</span>
             </div>
           </div>
@@ -514,7 +458,7 @@
         <!-- Category 3: Developer Tools & Platforms -->
         <div class="skill-category-card">
           <div class="skill-category-header">
-            <i class="fa-solid fa-screwdriver-wrench skill-category-icon"></i>
+            <i class="fa-solid fa-screwdriver-wrench skill-category-icon" aria-hidden="true"></i>
             <div>
               <h3 class="skill-category-title">Tools &amp; AI Architecture</h3>
               <p class="skill-category-desc">Version control, modern deployment, and RAG systems</p>
@@ -522,37 +466,129 @@
           </div>
           <div class="skill-items-grid">
             <div class="skill-item">
-              <img width="28" height="28" src="./assets/git.svg" alt="Git" />
+              <img width="28" height="28" src="./assets/git.svg" alt="Git" loading="lazy" decoding="async" />
               <span>Git</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28"
                 src="https://cdn.iconscout.com/icon/free/png-512/free-github-icon-svg-download-png-3073768.png?f=webp&w=512"
-                alt="GitHub" />
+                alt="GitHub" loading="lazy" decoding="async" />
               <span>GitHub</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28"
                 src="https://cdn.iconscout.com/icon/free/png-512/free-vscode-icon-svg-download-png-10918898.png?f=webp&w=512"
-                alt="VS Code" />
+                alt="VS Code" loading="lazy" decoding="async" />
               <span>VS Code</span>
             </div>
             <div class="skill-item">
               <img width="28" height="28"
                 src="https://cdn.iconscout.com/icon/free/png-512/free-shape-icon-svg-download-png-3051365.png?f=webp&w=512"
-                class="icons-colols" alt="Vercel" />
+                class="icons-colols" alt="Vercel" loading="lazy" decoding="async" />
               <span>Vercel</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="./assets/rag.svg" alt="RAG" />
+              <img width="28" height="28" src="./assets/rag.svg" alt="RAG" loading="lazy" decoding="async" />
               <span>RAG</span>
             </div>
             <div class="skill-item">
-              <img width="28" height="28" src="./assets/websocket.webp" alt="WebSocket" />
+              <img width="28" height="28" src="./assets/websocket.webp" alt="WebSocket" loading="lazy"
+                decoding="async" />
               <span>WebSocket</span>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Blogs section -->
+    <section class="blogs-section" id="blogs">
+      <div class="section-header">
+        <span class="section-eyebrow">Writings &amp; Insights</span>
+        <h2 class="section-title">Articles &amp; Publications</h2>
+        <p class="section-subtitle">
+          In-depth technical articles on JavaScript internals, modern web patterns, and automation workflows.
+        </p>
+      </div>
+
+      <div class="blogs-grid">
+        <!-- Blog Card 1 -->
+        <a href="https://saurabh532.hashnode.dev/beginners-guide-to-ci-cd-how-automation-saved-my-weekends?utm_source=hashnode&utm_medium=feed"
+          class="blog-link" target="_blank" rel="noopener noreferrer">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="./Images/Pipelinewrk.webp" alt="CI/CD Automation Guide Illustration" loading="lazy"
+                decoding="async" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta-top">
+                <span class="blog-platform-badge">
+                  <i class="fa-brands fa-hashnode" aria-hidden="true"></i>
+                  Hashnode
+                </span>
+                <span class="blog-read-time">5 min read</span>
+              </div>
+              <h3 class="blog-title">Beginner's Guide to CI/CD: How Automation Saved My Weekends</h3>
+              <p class="blog-date">June 22, 2026</p>
+              <div class="blog-footer-link">
+                <span>Read Article</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 2 -->
+        <a href="https://saurabh532.hashnode.dev/the-closure-cookbook-practical-recipes-for-real-world-javascript"
+          target="_blank" rel="noopener noreferrer" class="blog-link">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="./Images/javascript-closures.jpg" alt="JavaScript Closures Article Illustration" loading="lazy"
+                decoding="async" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta-top">
+                <span class="blog-platform-badge">
+                  <i class="fa-brands fa-hashnode" aria-hidden="true"></i>
+                  Hashnode
+                </span>
+                <span class="blog-read-time">3 min read</span>
+              </div>
+              <h3 class="blog-title">The Closure Cookbook: Practical Recipes for Real-World JavaScript</h3>
+              <p class="blog-date">May 11, 2026</p>
+              <div class="blog-footer-link">
+                <span>Read Article</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog Card 3 -->
+        <a href="https://saurabh532.hashnode.dev/mastering-the-javascript-event-loop-microtasks-vs-macrotasks-with-example"
+          target="_blank" rel="noopener noreferrer" class="blog-link">
+          <div class="blog-card">
+            <div class="blog-image">
+              <img src="./Images/event-loop.png" alt="JavaScript Event Loop Article Illustration" loading="lazy"
+                decoding="async" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta-top">
+                <span class="blog-platform-badge">
+                  <i class="fa-brands fa-hashnode" aria-hidden="true"></i>
+                  Hashnode
+                </span>
+                <span class="blog-read-time">6 min read</span>
+              </div>
+              <h3 class="blog-title">Mastering the JavaScript Event Loop</h3>
+              <p class="blog-date">March 17, 2026</p>
+              <div class="blog-footer-link">
+                <span>Read Article</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -568,54 +604,54 @@
 
       <div class="connect-grid">
         <a href="https://mail.google.com/mail/u/0/?tf=cm&to=sourabhpande43@gmail.com&fs=1" target="_blank"
-          class="connect-item-card connect-email-btn">
+          rel="noopener noreferrer" class="connect-item-card connect-email-btn">
           <div class="connect-item-top">
             <span class="connect-item-icon">
-              <i class="fas fa-envelope"></i>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             </span>
             <h3 class="connect-item-title">Email</h3>
           </div>
           <p class="connect-item-sub">sourabhpande43@gmail.com</p>
         </a>
 
-        <a href="https://www.linkedin.com/in/sourabh-pande-412170224" target="_blank" rel="noreferrer"
+        <a href="https://www.linkedin.com/in/sourabh-pande-412170224" target="_blank" rel="noopener noreferrer"
           class="connect-item-card social-icon" title="LinkedIn">
           <div class="connect-item-top">
             <span class="connect-item-icon">
-              <i class="fab fa-linkedin"></i>
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
             </span>
             <h3 class="connect-item-title">LinkedIn</h3>
           </div>
           <p class="connect-item-sub">Connect on LinkedIn</p>
         </a>
 
-        <a href="https://github.com/Sourabhpande532" target="_blank" rel="noreferrer"
+        <a href="https://github.com/Sourabhpande532" target="_blank" rel="noopener noreferrer"
           class="connect-item-card social-icon" title="GitHub">
           <div class="connect-item-top">
             <span class="connect-item-icon">
-              <i class="fab fa-github"></i>
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
             </span>
             <h3 class="connect-item-title">GitHub</h3>
           </div>
           <p class="connect-item-sub">Follow on GitHub</p>
         </a>
 
-        <a href="https://hashnode.com/@saurabhpande" target="_blank" rel="noreferrer"
+        <a href="https://hashnode.com/@saurabhpande" target="_blank" rel="noopener noreferrer"
           class="connect-item-card social-icon" title="Hashnode">
           <div class="connect-item-top">
             <span class="connect-item-icon">
-              <i class="fa-brands fa-hashnode"></i>
+              <i class="fa-brands fa-hashnode" aria-hidden="true"></i>
             </span>
             <h3 class="connect-item-title">Hashnode</h3>
           </div>
           <p class="connect-item-sub">Read technical blogs</p>
         </a>
 
-        <a href="https://leetcode.com/u/sourabhpande532/" target="_blank" rel="noreferrer"
+        <a href="https://leetcode.com/u/sourabhpande532/" target="_blank" rel="noopener noreferrer"
           class="connect-item-card social-icon" title="LeetCode">
           <div class="connect-item-top">
             <span class="connect-item-icon">
-              <i class="fa-solid fa-code"></i>
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
             </span>
             <h3 class="connect-item-title">LeetCode</h3>
           </div>
@@ -628,62 +664,134 @@
   </div>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to top">
-    <i class="fas fa-chevron-up"></i>
+  <button id="backToTop" type="button" title="Back to top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </button>
 
   <script>
-    // ── Hamburger Menu ──────────────────────────────────
-    var hamburger = document.getElementById( 'navHamburger' );
-    var navGroup = document.getElementById( 'navGroup' );
+    ( function() {
+      // ── Hamburger Menu ──────────────────────────────────
+      var hamburger = document.getElementById( 'navHamburger' );
+      var navGroup = document.getElementById( 'navGroup' );
+      var navbar = document.querySelector( '.navbar' );
+      var backBtn = document.getElementById( 'backToTop' );
+      var navLinks = navGroup ? navGroup.querySelectorAll( '.nav-link' ) : [];
+      var sections = document.querySelectorAll( 'section[id]' );
 
-    hamburger.addEventListener( 'click', function() {
-      var isOpen = navGroup.classList.toggle( 'open' );
-      hamburger.classList.toggle( 'open', isOpen );
-      hamburger.setAttribute( 'aria-expanded', isOpen );
-    } );
-
-    // Close menu when any nav link is clicked (smooth scroll UX)
-    var navLinks = navGroup.querySelectorAll( '.nav-link' );
-    navLinks.forEach( function( link ) {
-      link.addEventListener( 'click', function() {
+      function closeMobileMenu() {
+        if ( !navGroup || !hamburger ) return;
         navGroup.classList.remove( 'open' );
         hamburger.classList.remove( 'open' );
         hamburger.setAttribute( 'aria-expanded', 'false' );
-      } );
-    } );
-
-    // Close menu when tapping outside on mobile
-    document.addEventListener( 'click', function( e ) {
-      if ( !hamburger.contains( e.target ) && !navGroup.contains( e.target ) ) {
-        navGroup.classList.remove( 'open' );
-        hamburger.classList.remove( 'open' );
-        hamburger.setAttribute( 'aria-expanded', 'false' );
+        hamburger.setAttribute( 'aria-label', 'Open menu' );
       }
-    } );
 
-    // ── Sticky Navbar Elevation on Scroll ───────────────
-    var navbar = document.querySelector( '.navbar' );
-    window.addEventListener( 'scroll', function() {
-      if ( window.scrollY > 10 ) {
-        navbar.classList.add( 'scrolled' );
-      } else {
-        navbar.classList.remove( 'scrolled' );
-      }
-    } );
+      if ( hamburger && navGroup ) {
+        hamburger.addEventListener( 'click', function() {
+          var isOpen = navGroup.classList.toggle( 'open' );
+          hamburger.classList.toggle( 'open', isOpen );
+          hamburger.setAttribute( 'aria-expanded', String( isOpen ) );
+          hamburger.setAttribute( 'aria-label', isOpen ? 'Close menu' : 'Open menu' );
+        } );
 
-    // ── Back to Top ─────────────────────────────────────
-    var backBtn = document.getElementById( 'backToTop' );
-    window.addEventListener( 'scroll', function() {
-      if ( window.scrollY > 500 ) {
-        backBtn.classList.add( 'visible' );
-      } else {
-        backBtn.classList.remove( 'visible' );
+        // Close menu when any nav link is clicked
+        navLinks.forEach( function( link ) {
+          link.addEventListener( 'click', function() {
+            closeMobileMenu();
+          } );
+        } );
+
+        // Close menu when tapping outside on mobile
+        document.addEventListener( 'click', function( e ) {
+          if ( navGroup.classList.contains( 'open' ) && !hamburger.contains( e.target ) && !navGroup.contains( e.target ) ) {
+            closeMobileMenu();
+          }
+        } );
+
+        // Close menu on Escape key press
+        document.addEventListener( 'keydown', function( e ) {
+          if ( e.key === 'Escape' && navGroup.classList.contains( 'open' ) ) {
+            closeMobileMenu();
+            hamburger.focus();
+          }
+        } );
+
+        // Reset mobile menu state if viewport resizes to desktop
+        window.addEventListener( 'resize', function() {
+          if ( window.innerWidth > 767 && navGroup.classList.contains( 'open' ) ) {
+            closeMobileMenu();
+          }
+        }, { passive: true } );
       }
-    } );
-    backBtn.addEventListener( 'click', function() {
-      window.scrollTo( { top: 0, behavior: 'smooth' } );
-    } );
+
+      // ── Sticky Navbar Elevation, Active Link & Back to Top ─
+      // Uses hysteresis (20px / 6px) + rAF to prevent scroll threshold oscillation
+      var isScrolled = false;
+      var ticking = false;
+
+      function updateOnScroll() {
+        var scrollY = window.scrollY || window.pageYOffset;
+
+        if ( navbar ) {
+          if ( !isScrolled && scrollY > 20 ) {
+            isScrolled = true;
+            navbar.classList.add( 'scrolled' );
+          } else if ( isScrolled && scrollY < 6 ) {
+            isScrolled = false;
+            navbar.classList.remove( 'scrolled' );
+          }
+        }
+
+        if ( backBtn ) {
+          if ( scrollY > 500 ) {
+            backBtn.classList.add( 'visible' );
+          } else {
+            backBtn.classList.remove( 'visible' );
+          }
+        }
+
+        // Highlight active section in navbar
+        if ( sections.length && navLinks.length ) {
+          var currentSectionId = 'about';
+          var scrollPosition = scrollY + 140;
+
+          for ( var i = 0; i < sections.length; i++ ) {
+            var sec = sections[ i ];
+            if ( scrollPosition >= sec.offsetTop ) {
+              currentSectionId = sec.getAttribute( 'id' );
+            }
+          }
+
+          // If scrolled to the very bottom of the page, highlight Connect
+          if ( window.innerHeight + scrollY >= document.documentElement.scrollHeight - 40 ) {
+            currentSectionId = 'connect';
+          }
+
+          navLinks.forEach( function( link ) {
+            var isMatch = link.getAttribute( 'href' ) === '#' + currentSectionId;
+            link.classList.toggle( 'active', isMatch );
+          } );
+        }
+
+        ticking = false;
+      }
+
+      window.addEventListener( 'scroll', function() {
+        if ( !ticking ) {
+          window.requestAnimationFrame( updateOnScroll );
+          ticking = true;
+        }
+      }, { passive: true } );
+
+      // Run once on load to sync initial scroll state
+      updateOnScroll();
+
+      if ( backBtn ) {
+        backBtn.addEventListener( 'click', function() {
+          window.scrollTo( { top: 0, behavior: 'smooth' } );
+        } );
+      }
+    } )();
   </script>
 </body>
 
